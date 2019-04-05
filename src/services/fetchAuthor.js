@@ -1,7 +1,7 @@
 import BASE_URL from '../shared/baseUrl';
 
 
-const fetchUser = (userId) => {
+const fetchAuthor = (userId) => {
 
     const USER_URL = `${BASE_URL}/users/${userId}`;
 
@@ -9,4 +9,4 @@ const fetchUser = (userId) => {
         .then((response) => response.json())
 }
 
-export default fetchUser;
+export default fetchAuthor;
