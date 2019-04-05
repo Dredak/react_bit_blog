@@ -29,7 +29,7 @@ class SingleAuthorPage extends React.Component {
             return ""
         }
 
-        const { name, username, email, phone, address } = this.state.author;
+        const { name, username, email, phone, address, company } = this.state.author;
         console.log(this.state.author);
         return (
             <>
@@ -54,17 +54,16 @@ class SingleAuthorPage extends React.Component {
                         <p>city: {address.city}</p>
                         <p>zipcode: {address.zipcode}</p>
                     </div>
-                    <img src="https://via.placeholder.com/150" />
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11322.276616522473!2d20.45802175!3d44.80996845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2srs!4v1554477970115!5m2!1sen!2srs" width="250" height="200" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <hr />
 
                 <div className="layout">
                     <img src="https://via.placeholder.com/150" />
                     <div className="innerLayout">
-                        <h4>Adress</h4>
-                        <p>username: {username}</p>
-                        <p>email: {email}</p>
-                        <p>phone: {phone}</p>
+                        <h4>Company</h4>
+                        <p>name: {company.name}</p>
+                        <p>slogan: {company.catchPhrase}</p>
                     </div>
                 </div>
 
