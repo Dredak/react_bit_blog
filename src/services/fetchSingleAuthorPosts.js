@@ -15,4 +15,18 @@ const fetchSingleAuthorPosts = (id) => {
         })
 
 }
-export default fetchSingleAuthorPosts;
+
+const fetchSingleAuthorNumPosts = (id) => {
+    const AUTHOR_POSTS_URL = `${BASE_URL}/posts?userId=${id}`
+    return fetch(AUTHOR_POSTS_URL)
+        .then(response => response.json())
+        .then((response) => {
+            return response.length;
+        })
+
+}
+
+export {
+    fetchSingleAuthorPosts,
+    fetchSingleAuthorNumPosts
+}

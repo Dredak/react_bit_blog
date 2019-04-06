@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import fetchPost from '../../../services/fetchPost';
 import fetchAuthor from '../../../services/fetchAuthor';
-import fetchSingleAuthorPosts from '../../../services/fetchSingleAuthorPosts';
+import {fetchSingleAuthorPosts} from '../../../services/fetchSingleAuthorPosts';
 import textTrim from './../../../services/textTrim';
 
 
