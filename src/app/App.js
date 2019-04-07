@@ -24,7 +24,7 @@ class App extends Component {
           <Route path="/about" component={About} />
           <Route path="/singlePostPage/:id" component={SinglePostPage} />
           <Route path="/authors" component={Authors} />
-          <Route path="/singleAuthorPage" component={SingleAuthorPage} />
+          <Route path="/singleAuthorPage/:id" component={SingleAuthorPage} />
           <Route exact path="/" component={PostsPage} />
         </Switch>
         <Footer />
