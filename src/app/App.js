@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
-
 import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './about/About';
-// import SinglePostPage '.'
 import Authors from './authors/Authors';
-
-
 import { Switch, Route } from 'react-router-dom';
 import SinglePostPage from './posts/postDetails/SinglePostPage';
 import SingleAuthorPage from './authors/SingleAuthorPage';

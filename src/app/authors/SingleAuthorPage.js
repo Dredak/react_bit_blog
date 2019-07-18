@@ -22,15 +22,13 @@ class SingleAuthorPage extends React.Component {
     }
 
     render() {
-
-        const { author } = this.state;
-
-        if (!author) {
-            return ""
+        
+        if (!this.state.author) {
+            return <h2>Loading....</h2>
         }
-
+        
         const { name, username, email, phone, address, company } = this.state.author;
-        console.log(this.state.author);
+        
         return (
             <>
 
@@ -54,7 +52,7 @@ class SingleAuthorPage extends React.Component {
                         <p>city: {address.city}</p>
                         <p>zipcode: {address.zipcode}</p>
                     </div>
-                    <iframe src={`https://maps.google.com/maps?q=${address.geo.lat},${address.geo.lng}&hl=es;z=14&amp;&output=embed`} width="250" height="200" frameborder="0" allowfullscreen></iframe>
+                    <iframe src={`https://maps.google.com/maps?q=${address.geo.lat},${address.geo.lng}&hl=es;z=14&amp;&output=embed`} width="250" height="200" frameBorder="0" allowFullscreen></iframe>
                 </div>
                 <hr />
 

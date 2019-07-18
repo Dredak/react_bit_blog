@@ -3,10 +3,10 @@ import React from 'react';
 const Footer = (props) => {
     return (
 
-        <footer class="page-footer">
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2014 Copyright Text
+        <footer className="page-footer">
+            <div className="footer-copyright">
+                <div className="container">
+                    © {new Date().getFullYear()} Copyright Text
                 </div>
             </div>
         </footer>

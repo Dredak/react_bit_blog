@@ -33,7 +33,9 @@ class PostsPage extends React.Component {
         return (
             <>
                 <h4 className="center">Posts</h4>
-                {mappedPosts}
+                <div className="posts-wrapper">
+                    {mappedPosts}
+                </div>
             </>
         );
     }

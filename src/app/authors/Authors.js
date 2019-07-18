@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import fetchAuthors from '../../services/fetchAuthors';
-import {fetchSingleAuthorNumPosts} from '../../services/fetchSingleAuthorPosts';
+
 
 class Authors extends React.Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            authors: [],
-            numOfPosts: []   
+            authors: [],  
     }
 }
 
@@ -17,7 +16,6 @@ class Authors extends React.Component {
         fetchAuthors()
         .then((fetchedAuthors) => {
             this.setState({authors:fetchedAuthors})
-            fetchedAuthors.map()
         }) 
     }
     
@@ -25,12 +23,7 @@ class Authors extends React.Component {
         this.onLoadAuthors();
     }
 
-    onLoadNumOfPosts(id){
-        fetchSingleAuthorNumPosts(id)
-        .then((numOfPosts)=>{
-            this.setState({numOfPosts: numOfPosts})
-        })
-    }
+   
 
     render() {
 
@@ -40,14 +33,14 @@ class Authors extends React.Component {
 
         const listOfAuthors = this.state.authors.map((author)=>{
             const{name, id} = author;
-            return <Link to={`/singleAuthorPage/${id}`} key={id}><h4>{name} - </h4></Link>
+            return <Link className="single-author-card" to={`/singleAuthorPage/${id}`} key={id}>{name}</Link>
         })
 
         return (
-            <>
-                <h2>Authors({this.state.authors.length})</h2>
+            <div className="authors-wrapper">
+                <h2 className="authors-title">Authors({this.state.authors.length})</h2>
                 {listOfAuthors}
-            </>
+            </div>
         )
     }
 }

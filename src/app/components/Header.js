@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 const Header = (props) => {
     return (
-        <nav>
-            <div class="nav-wrapper">
-                <Link to="/" class="brand-logo">Bit Blog</Link>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <nav className="nav">
+            <div className="nav-inner-wrapper">
+                <Link to="/" className="logo">Bit Blog</Link>
+                <ul id="nav-mobile" className="right">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/authors">Authors</Link></li>
                     <li><Link to="/about">About</Link></li>

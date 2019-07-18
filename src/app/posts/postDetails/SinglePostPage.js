@@ -20,7 +20,7 @@ class SinglePostPage extends React.Component {
         fetchPost(this.props.match.params.id)
             .then((fetchedPost) => {
                 this.setState({ post: fetchedPost })
-                this.onLoadAuthor(fetchedPost.userId);//pitati nenada kad dodje - coa
+                this.onLoadAuthor(fetchedPost.userId);
                 this.onLoadSingleAuthorPosts(fetchedPost.userId);
             })
     }
@@ -44,7 +44,7 @@ class SinglePostPage extends React.Component {
 
     }
 
-    componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate(prevProps) {
         if (prevProps.match.params.id !== this.props.match.params.id) {
             this.onLoadPost()
         }
@@ -56,22 +56,22 @@ class SinglePostPage extends React.Component {
         const { name } = this.state.author;
         const threePosts = this.state.authorPosts.map((post) => {
             const { authorTitle, postId, authorBody } = post;
-            return <li><Link to={`/singlePostPage/${postId}`}>{authorTitle} {postId} - {textTrim(authorBody)}</Link></li>
+            return <li className="single-post-card" key={postId}><Link to={`/singlePostPage/${postId}`}>{authorTitle} {postId} - {textTrim(authorBody)}</Link></li>
         });
 
 
         return (
-            <>
-                <h4>{title}{id}</h4>
-                <Link to={`/singleAuthorPage/${userId}`}><p>{name}</p></Link>
-                <p>{body}</p>
+            <div className="single-post-wrapper">
+                <Link to="/">&lt;Back</Link>
+                <h4 className="single-post-title">{title}</h4>
+                <Link to={`/singleAuthorPage/${userId}`} className="single-post-author">{name}</Link>
+                <p className="single-post-content">{body}</p>
                 <hr />
-
                 <h5>3 more posts from same author</h5>
                 <ul>
                     {threePosts}
                 </ul>
-            </>
+            </div>
         )
     }
 }

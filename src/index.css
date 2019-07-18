@@ -1,3 +1,10 @@
+:root {
+  --post-bg-color: #546e7a;
+  --post-title-color: #039be5;
+}
+html {
+  height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +13,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  height: 100%;
+}
+
+#root {
+  min-height: 100%;
+  display: flex; 
+  flex-direction: column;
 }
 
 code {
@@ -20,4 +35,125 @@ code {
 .innerLayout{
   margin-left: 10px;
 }
+/* Header */
+.nav-inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 
+.logo {
+  margin-left: 20px;
+  font-size: 30px;
+}
+
+
+/* POSTS PAGE */
+.posts-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-item {
+  align-self: center;
+  width: 80%;
+  background-color: var( --post-bg-color);
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+  margin-bottom: 20px;
+  transition: all .5s;
+}
+
+.post-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.75);
+}
+
+.content-wrapper {
+  color: #fff;
+}
+
+.post-title {
+  display: block;
+  font-size: 25px;
+  text-align: center;
+}
+
+/* SINGLE POST PAGE */
+.single-post-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.single-post-title {
+text-align: center;
+font-size: 25px;
+}
+
+.single-post-author {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.single-post-content {
+font-size: 20px;
+text-align: justify;
+padding-bottom: 20px;
+border-bottom: 1px solid rgb(192, 189, 189);
+}
+
+.single-post-card {
+  background-color: var( --post-bg-color);
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+  margin-bottom: 20px;
+  transition: all .5s;
+}
+
+.single-post-card a {  
+    color: #fff;
+}
+
+.single-post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.75);
+}
+
+/* AUTHORS PAGE */
+.authors-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.authors-title {
+text-align: center;
+font-size: 35px;
+}
+
+.single-author-card {
+  background-color: var( --post-bg-color);
+  padding: 20px;
+  color: #fff;
+  font-size: 18px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+  margin-bottom: 20px;
+  transition: all .5s;
+}
+
+.single-author-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.75);
+}
+/* FOOTER */
+.page-footer {
+  margin-top: auto;
+}
