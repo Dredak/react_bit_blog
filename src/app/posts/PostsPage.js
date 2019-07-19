@@ -1,6 +1,7 @@
 import React from 'react';
 import PostItem from './PostItem';
 import fetchPosts from './../../services/fetchPosts';
+import Loader from '../components/Loader';
 
 class PostsPage extends React.Component {
     constructor(props) {
@@ -28,7 +29,9 @@ class PostsPage extends React.Component {
             return <PostItem title={title} body={body} id={id} key={id} />
         })
         if (!mappedPosts) {
-            return <h2>Loading...</h2>
+            return (
+                <Loader />
+            );
         }
         return (
             <>

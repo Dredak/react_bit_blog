@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import fetchAuthor from './../../services/fetchAuthor';
+import Loader from '../components/Loader';
 
 class SingleAuthorPage extends React.Component {
     constructor(props) {
@@ -24,7 +25,9 @@ class SingleAuthorPage extends React.Component {
     render() {
         
         if (!this.state.author) {
-            return <h2>Loading....</h2>
+            return (
+                <Loader />
+            );
         }
         
         const { name, username, email, phone, address, company } = this.state.author;

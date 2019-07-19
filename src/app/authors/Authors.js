@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import fetchAuthors from '../../services/fetchAuthors';
-
+import Loader from '../components/Loader';
 
 class Authors extends React.Component {
 
@@ -28,7 +28,9 @@ class Authors extends React.Component {
     render() {
 
         if (!this.state.authors.length){
-            return <p>Loading....</p>
+            return (
+                <Loader />
+            );
         }
 
         const listOfAuthors = this.state.authors.map((author)=>{
