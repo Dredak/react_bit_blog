@@ -2,9 +2,9 @@ import React from 'react';
 
 const About = (props) => {
     return (
-        <>
-            <h2>About</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum expedita, quibusdam totam nam itaque cupiditate
+        <div className="about-wrapper">
+            <h2 className="about-title">About</h2>
+            <p className="about-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum expedita, quibusdam totam nam itaque cupiditate
             voluptatibus animi eum provident, quam nemo? Nemo iste alias tenetur ut explicabo eos? Illo unde sunt recusandae fuga
             ipsam suscipit non iusto amet molestiae quo? Quaerat, tempore praesentium porro asperiores non sint qui laborum alias
             fugit accusantium quas hic, consequatur molestiae suscipit? Odit pariatur vel praesentium aut, odio officiis assumenda
@@ -15,12 +15,12 @@ const About = (props) => {
             Est labore similique, odio officia ea ratione illo facere assumenda corrupti consequatur ullam cupiditate eum porro
         velit quidem dolor eius at explicabo! Ut fugiat ipsam provident.</p>
 
-            <h2>Our Story</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum expedita, quibusdam totam nam itaque cupiditate
+            <h2 className="about-title">Our Story</h2>
+            <p className="about-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum expedita, quibusdam totam nam itaque cupiditate
             voluptatibus animi eum provident, tes eveniet, vel, earum autem aliquam illo.
             Est labore similique, odio officia ea ratione illo facere assumenda corrupti consequatur ullam cupiditate eum porro
         velit quidem dolor eius at explicabo! Ut fugiat ipsam provident.</p>
-        </>
+        </div>
     )
 }
 export default About

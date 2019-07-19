@@ -13,7 +13,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
   height: 100%;
 }
 
@@ -28,13 +27,6 @@ code {
     monospace;
 }
 
-.layout {
-  display: flex;
-}
-
-.innerLayout{
-  margin-left: 10px;
-}
 /* Header */
 .nav-inner-wrapper {
   display: flex;
@@ -46,7 +38,6 @@ code {
   font-size: 30px;
 }
 
-
 /* POSTS PAGE */
 .posts-wrapper {
   display: flex;
@@ -54,8 +45,8 @@ code {
 }
 
 .post-item {
-  align-self: center;
   width: 80%;
+  align-self: center;
   background-color: var( --post-bg-color);
   padding: 20px;
   border: 1px solid black;
@@ -84,7 +75,9 @@ code {
 .single-post-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 50px;
 }
 
 .single-post-title {
@@ -129,7 +122,9 @@ border-bottom: 1px solid rgb(192, 189, 189);
 .authors-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  width: 80%;
+  padding: 30px 0px;
+  margin: 0 auto;
 }
 
 .authors-title {
@@ -153,6 +148,39 @@ font-size: 35px;
   transform: translateY(-4px);
   box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.75);
 }
+
+/* AUTHOR INFO PAGE */
+.author-info-wrapper {
+  width: 50%;
+  padding: 50px 0px;
+  margin: 0 auto;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+
+.info-row-inner-wrapper {
+
+}
+
+/* ABOUT PAGE*/
+.about-wrapper {
+  width: 80%;
+  padding: 50px 0px;
+  margin: 0 auto;
+}
+
+.about-title {
+  text-align: center;
+}
+
+.about-content{
+  text-align: justify;
+}
+
 /* FOOTER */
 .page-footer {
   margin-top: auto;

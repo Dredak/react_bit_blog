@@ -52,7 +52,7 @@ class SinglePostPage extends React.Component {
 
     render() {
 
-        const { id, title, body, userId } = this.state.post;
+        const { title, body, userId } = this.state.post;
         const { name } = this.state.author;
         const threePosts = this.state.authorPosts.map((post) => {
             const { authorTitle, postId, authorBody } = post;
